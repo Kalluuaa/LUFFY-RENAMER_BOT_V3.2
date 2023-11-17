@@ -100,9 +100,9 @@ async def doc(bot,update):
      
      value = 2090000000
      if value < file.file_size:
-         await ms.edit("```Trying To Upload```")
+         await ms.edit("`Trying To Upload`")
          try:
-             filw = await app.send_document(log_channel,document = file_path,thumb=ph_path,caption = caption,progress=progress_for_pyrogram,progress_args=( "```Trying To Uploading```",  ms, c_time   ))
+             filw = await app.send_document(log_channel,document = file_path,thumb=ph_path,caption = caption,progress=progress_for_pyrogram,progress_args=( "`Trying To Uploading`",  ms, c_time   ))
              from_chat = filw.chat.id
              mg_id = filw.id
              time.sleep(2)
