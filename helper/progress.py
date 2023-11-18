@@ -34,10 +34,10 @@ async def progress_for_pyrogram(
             #''.join(["█" for i in range(math.floor(percentage / 5))]),
             #''.join(["░" for i in range(20 - math.floor(percentage / 5))]))
             
-        tmp = progress +"🗂️: {0} | {1}\n⏳: {2}%\n🚀: {2}/s\n⏱️: {3}\n".format(
-            round(percentage, 2),
+        tmp = progress +"🗂️: {0} | {1}\n⏳: {2}%\n🚀: {3}/s\n⏱️: {4}\n".format(
             humanbytes(current),
             humanbytes(total),
+            round(percentage, 2),
             humanbytes(speed),
             # elapsed_time if elapsed_time != '' else "0 s",
             estimated_total_time if estimated_total_time != '' else "0 s"
