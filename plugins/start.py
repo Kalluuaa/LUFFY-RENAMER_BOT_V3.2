@@ -34,11 +34,11 @@ def profind(id):
 currentTime = datetime.datetime.now()
 
 if currentTime.hour < 12:
-	wish = "Good morning."
+	wish = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ."
 elif 12 <= currentTime.hour < 12:
-	wish = 'Good afternoon.'
+	wish = 'Gᴏᴏᴅ ᴀғᴛᴇʀɴᴏᴏɴ.'
 else:
-	wish = 'Good evening.'
+	wish = 'Gᴏᴏᴅ ᴇᴠᴇɴɪɴɢ.'
 
 #-------------------------------
 
@@ -57,8 +57,9 @@ async def start(client,message):
 	    await message.reply_photo(photo ="https://graph.org/file/955538487647c67dce193.jpg",
 		    caption =script.START_TXT.format(wish, message.from_user.mention), 
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	 [[ InlineKeyboardButton("Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ" ,url="https://t.me/EliteCraft_Studios"), InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ", url="https://t.me/EliteCraft_Support")], 
+	[InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"), InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about") ],
+	 [ InlineKeyboardButton("Bᴜʏ Pʀᴇᴍɪᴜᴍ" callback_data="upgrade") ]]))
 	    return
 	if id:
 	        if id == procode:
