@@ -99,19 +99,19 @@ async def send_doc(client,message):
            
        c_time = time.time()
        
-       if user_type == "Free":
-        LIMIT = 600
-    else:
-        LIMIT = 50
-    then = used_date + LIMIT
-    left = round(then - c_time)
-    conversion = datetime.timedelta(seconds=left)
-    ltime = str(conversion)
-    if left > 0:       	    
+       if user_type=="Free":
+           LIMIT = 600
+       else:
+           LIMIT = 50
+       then = used_date+ LIMIT
+       left = round(then - c_time)
+       conversion = datetime.timedelta(seconds=left)
+       ltime = str(conversion)
+       if left > 0:       	    
        	await message.reply_text(f"`Sorry Dude I am not only for YOU \n Flood control is active so please wait for {ltime}`",reply_to_message_id = message.id)
        else:
-       		await client.forward_messages(log_channel, message.from_user.id, message.id)
-       		await client.send_message(log_channel,f"User Id :- {user_id}")       		
+       		#await client.forward_messages(log_channel, message.from_user.id, message.id)
+       		#await client.send_message(log_channel,f"User Id :- {user_id}")       		
            		
        		media = await client.get_messages(message.chat.id,message.id)
        		file = media.document or media.video or media.audio 
