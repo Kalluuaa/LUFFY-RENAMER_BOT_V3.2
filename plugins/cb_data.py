@@ -100,7 +100,7 @@ async def doc(bot,update):
      
      value = 2090000000
      if value < file.file_size:
-         await ms.edit("`Trying To Upload`")
+         await ms.edit("`⎝⎝✧ 𝘗𝘳𝘦𝘱𝘢𝘳𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦 ✧⎠⎠`")
          try:
              filw = await app.send_document(log_channel,document = file_path,thumb=ph_path,caption = caption,progress=progress_for_pyrogram,progress_args=( "`Trying To Uploading`",  ms, c_time   ))
              from_chat = filw.chat.id
@@ -123,7 +123,7 @@ async def doc(bot,update):
              except:
                  return
      else:
-     		await ms.edit("`Trying To Upload`")
+     		await ms.edit("`⎝⎝✧ 𝘗𝘳𝘦𝘱𝘢𝘳𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦 ✧⎠⎠`")
      		c_time = time.time()
      		try:
      			await bot.send_document(update.from_user.id,document = file_path,thumb=ph_path,caption = caption,progress=progress_for_pyrogram,progress_args=( "`Trying To Uploading`",  ms, c_time   ))			
@@ -202,7 +202,7 @@ async def vid(bot,update):
      
      value = 2090000000
      if value < file.file_size:
-         await ms.edit("`Trying To Upload`")
+         await ms.edit("`⎝⎝✧ 𝘗𝘳𝘦𝘱𝘢𝘳𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦 ✧⎠⎠`")
          try:
              filw = await app.send_video(log_channel,video= file_path,thumb=ph_path,duration=duration ,caption = caption,progress=progress_for_pyrogram,progress_args=( "`Trying To Uploading`",  ms, c_time   ))
              from_chat = filw.chat.id
@@ -225,7 +225,7 @@ async def vid(bot,update):
              except:
                  return
      else:
-     		await ms.edit("`Trying To Upload`")
+     		await ms.edit("`⎝⎝✧ 𝘗𝘳𝘦𝘱𝘢𝘳𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦 ✧⎠⎠`")
      		c_time = time.time()
      		try:
      			await bot.send_video(update.from_user.id,video = file_path,thumb=ph_path,duration=duration,caption = caption,progress=progress_for_pyrogram,progress_args=( "`Trying To Uploading`",  ms, c_time   ))			
@@ -301,7 +301,7 @@ async def aud(bot,update):
      			os.remove(file_path)
      			os.remove(ph_path)
      else:
-     		await ms.edit("`Trying To Upload`")
+     		await ms.edit("`⎝⎝✧ 𝘗𝘳𝘦𝘱𝘢𝘳𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦 ✧⎠⎠`")
      		c_time = time.time()
      		try:
      			await bot.send_audio(update.message.chat.id,audio = file_path,caption = caption,duration = duration, progress=progress_for_pyrogram,progress_args=( "`Trying To Uploading`",  ms, c_time   ))
