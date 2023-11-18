@@ -102,7 +102,7 @@ async def doc(bot,update):
      if value < file.file_size:
          await ms.edit("`⎝⎝✧ 𝘗𝘳𝘦𝘱𝘢𝘳𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦 ✧⎠⎠`")
          try:
-             filw = await app.send_document(log_channel,document = file_path,thumb=ph_path,caption = caption,progress=progress_for_pyrogram,progress_args=( "`Trying To Uploading`",  ms, c_time   ))
+             filw = await app.send_document(log_channel,document = file_path,thumb=ph_path,caption = caption,progress=progress_for_pyrogram,progress_args=( "`⎝⎝✧ 𝘛𝘳𝘺𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦...`",  ms, c_time   ))
              from_chat = filw.chat.id
              mg_id = filw.id
              time.sleep(2)
@@ -126,7 +126,7 @@ async def doc(bot,update):
      		await ms.edit("`⎝⎝✧ 𝘗𝘳𝘦𝘱𝘢𝘳𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦 ✧⎠⎠`")
      		c_time = time.time()
      		try:
-     			await bot.send_document(update.from_user.id,document = file_path,thumb=ph_path,caption = caption,progress=progress_for_pyrogram,progress_args=( "`Trying To Uploading`",  ms, c_time   ))			
+     			await bot.send_document(update.from_user.id,document = file_path,thumb=ph_path,caption = caption,progress=progress_for_pyrogram,progress_args=( "`⎝⎝✧ 𝘛𝘳𝘺𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦...`",  ms, c_time   ))			
      			await ms.delete()
      			os.remove(file_path)
      		except Exception as e:
@@ -204,7 +204,7 @@ async def vid(bot,update):
      if value < file.file_size:
          await ms.edit("`⎝⎝✧ 𝘗𝘳𝘦𝘱𝘢𝘳𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦 ✧⎠⎠`")
          try:
-             filw = await app.send_video(log_channel,video= file_path,thumb=ph_path,duration=duration ,caption = caption,progress=progress_for_pyrogram,progress_args=( "`Trying To Uploading`",  ms, c_time   ))
+             filw = await app.send_video(log_channel,video= file_path,thumb=ph_path,duration=duration ,caption = caption,progress=progress_for_pyrogram,progress_args=( "`⎝⎝✧ 𝘛𝘳𝘺𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦...`",  ms, c_time   ))
              from_chat = filw.chat.id
              mg_id = filw.id
              time.sleep(2)
@@ -228,7 +228,7 @@ async def vid(bot,update):
      		await ms.edit("`⎝⎝✧ 𝘗𝘳𝘦𝘱𝘢𝘳𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦 ✧⎠⎠`")
      		c_time = time.time()
      		try:
-     			await bot.send_video(update.from_user.id,video = file_path,thumb=ph_path,duration=duration,caption = caption,progress=progress_for_pyrogram,progress_args=( "`Trying To Uploading`",  ms, c_time   ))			
+     			await bot.send_video(update.from_user.id,video = file_path,thumb=ph_path,duration=duration,caption = caption,progress=progress_for_pyrogram,progress_args=( "`⎝⎝✧ 𝘛𝘳𝘺𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦...`",  ms, c_time   ))			
      			await ms.delete()
      			os.remove(file_path)
      		except Exception as e:
@@ -287,10 +287,10 @@ async def aud(bot,update):
      		img = Image.open(ph_path)
      		img.resize((320, 320))
      		img.save(ph_path, "JPEG")
-     		await ms.edit("`Trying To Upload`")
+     		await ms.edit("`⎝⎝✧ 𝘗𝘳𝘦𝘱𝘢𝘳𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦 ✧⎠⎠`")
      		c_time = time.time()
      		try:
-     			await bot.send_audio(update.message.chat.id,audio = file_path,caption = caption,thumb=ph_path,duration =duration, progress=progress_for_pyrogram,progress_args=( "`Trying To Uploading`",  ms, c_time   ))
+     			await bot.send_audio(update.message.chat.id,audio = file_path,caption = caption,thumb=ph_path,duration =duration, progress=progress_for_pyrogram,progress_args=( "`⎝⎝✧ 𝘛𝘳𝘺𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦...`",  ms, c_time   ))
      			await ms.delete()
      			os.remove(file_path)
      			os.remove(ph_path)
@@ -304,7 +304,7 @@ async def aud(bot,update):
      		await ms.edit("`⎝⎝✧ 𝘗𝘳𝘦𝘱𝘢𝘳𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦 ✧⎠⎠`")
      		c_time = time.time()
      		try:
-     			await bot.send_audio(update.message.chat.id,audio = file_path,caption = caption,duration = duration, progress=progress_for_pyrogram,progress_args=( "`Trying To Uploading`",  ms, c_time   ))
+     			await bot.send_audio(update.message.chat.id,audio = file_path,caption = caption,duration = duration, progress=progress_for_pyrogram,progress_args=( "`⎝⎝✧ 𝘛𝘳𝘺𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦...`",  ms, c_time   ))
      			await ms.delete()
      			os.remove(file_path)
      		except Exception as e:
