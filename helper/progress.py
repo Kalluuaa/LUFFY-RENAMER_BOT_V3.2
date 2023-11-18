@@ -1,6 +1,8 @@
 import math
 import time
 from helper.text import mr
+from pyrogram.types import (
+    InlineKeyboardButton, InlineKeyboardMarkup)
 
 
 async def progress_for_pyrogram(
