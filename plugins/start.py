@@ -53,7 +53,8 @@ async def start(client,message):
 	try:
 	    id = message.text.split(' ')[1]
 	except:
-	    await message.reply_text(text =f"""
+	    await message.reply_photo(photo ="https://graph.org/file/955538487647c67dce193.jpg",
+		    text =f"""
 	Hello {wish} {message.from_user.first_name }
 	__I am file renamer bot, Please sent any telegram 
 	**Document Or Video** and enter new filename to rename it__
