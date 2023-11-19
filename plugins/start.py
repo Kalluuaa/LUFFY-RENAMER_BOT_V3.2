@@ -76,41 +76,69 @@ async def cb_handler(client, query: CallbackQuery):
             text=script.START_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup = InlineKeyboardMarkup([[
-                InlineKeyboardButton("👨‍💻 Dᴇᴠꜱ 👨‍💻", callback_data='dev')
+                InlineKeyboardButton('Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/elitecraft_Studios'),
+                InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ', url='https://t.me/elitecraft_support')
                 ],[
-                InlineKeyboardButton('📯 Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/PYRO_BOTZ'),
-                InlineKeyboardButton('💁‍♂️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/PYRO_BOTZ_CHAT')
-                ],[
-                InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
-                InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
+                InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about'),
+                InlineKeyboardButton('Hᴇʟᴩ', callback_data='help')
+            ],[
+                InlineKeyboardButton('Bᴜʏ Pʀᴇᴍɪᴜᴍ', callback_data='premium')
             ]])
         )
     elif data == "help":
         await query.message.edit_text(
-            text=script.HELP_TXT,
+            text=script.HELP_TXT.formate(message.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                #⚠️ don't change source code & source link ⚠️ #
-                InlineKeyboardButton("❣️ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/TEAM-PYRO-BOTZ/PYRO-RENAME-BOT")
+                InlineKeyboardButton("ᴛʜᴜᴍʙɴᴀɪʟ", callback_data="thumb"),
+		InlineKeyboardButton("ᴄᴀᴘᴛɪᴏɴ", callback_data="caption")
                 ],[
-                InlineKeyboardButton("❤️‍🔥 Hᴏᴡ Tᴏ Uꜱᴇ❤️‍🔥", url='https://youtu.be/4ZfvMSDXBVg')
+                InlineKeyboardButton("ʀᴇɴᴅᴇʀɪɴɢ ɪɴғᴏ", callback_data='rendering_info')
                 ],[
-                InlineKeyboardButton("🔒 Cʟᴏꜱᴇ", callback_data = "close"),
-                InlineKeyboardButton("◀️ Bᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("ʜᴏᴍᴇ", callback_data = "start"),
+                InlineKeyboardButton("sᴏᴜʀᴄᴇ", callback_data = "source")
             ]])            
         )
     elif data == "about":
         await query.message.edit_text(
-            text=script.ABOUT_TXT.format(client.mention),
+            text=script.ABOUT_TXT,
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup([[
-                #⚠️ don't change source code & source link ⚠️ #
-                InlineKeyboardButton("❣️ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/TEAM-PYRO-BOTZ/PYRO-RENAME-BOT")
-                ],[
-                InlineKeyboardButton("🖥️ Hᴏᴡ Tᴏ Mᴀᴋᴇ", url="https://youtu.be/GfulqsSnTv4")
-                ],[
-                InlineKeyboardButton("🔒 Cʟᴏꜱᴇ", callback_data = "close"),
-                InlineKeyboardButton("◀️ Bᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+            ]])            
+	)
+    elif data == "premium":
+        await query.message.edit_text(
+            text=script.PREMIUM_TXT,
+            disable_web_page_preview = True,
+            reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("ᴀᴅᴍɪɴ", url = "https://t.me/god_luffy_ati")
+            ],[
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+            ]])            
+	)
+    elif data == "thumb":
+        await query.message.edit_text(
+            text=script.THUMB_TXT,
+            disable_web_page_preview = True,
+            reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+            ]])            
+	)
+    elif data == "caption":
+        await query.message.edit_text(
+            text=script.CAPTION_TXT,
+            disable_web_page_preview = True,
+            reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+            ]])            
+	)
+    elif data == "source":
+        await query.message.edit_text(
+            text=script.SOURCE_TXT,
+            disable_web_page_preview = True,
+            reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
             ]])            
 	)
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
