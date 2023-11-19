@@ -55,7 +55,7 @@ async def start(client,message):
 	    id = message.text.split(' ')[1]
 	except:
 	    await message.reply_photo(photo ="https://graph.org/file/955538487647c67dce193.jpg",
-		    caption =script.START_TXT.format(wish, message.from_user.mention), 
+		    caption =script.START_TXT.format(message.from_user.mention), 
 	reply_markup=InlineKeyboardMarkup(
 	 [[ InlineKeyboardButton("Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ" ,url="https://t.me/EliteCraft_Studios"), InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ", url="https://t.me/EliteCraft_Support")], 
 	[InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"), InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about") ],
@@ -141,7 +141,7 @@ async def send_doc(client,message):
        		            return
        		        pre_check = check_expi(buy_date)
        		        if pre_check == True:
-       		            await message.reply_text(f"""__What do you want me to do with this file?__\n**File Name** :- {filename}\n**File Size** :- {humanize.naturalsize(file.file_size)}\n**Dc ID** :- {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 Rename",callback_data = "rename"),InlineKeyboardButton("✖️ Cancel",callback_data = "cancel")  ]]))
+       		            await message.reply_text(f"""__ᴡʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴍᴇ ᴛᴏ ᴅᴏ ᴡɪᴛʜ ᴛʜɪs ғɪʟᴇ?__\n**Fɪʟᴇ Nᴀᴍᴇ** :- {filename}\n**Fɪʟᴇ Sɪᴢᴇ** :- {humanize.naturalsize(file.file_size)}\n**ᴅᴄ ɪᴅ** :- {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 Rename",callback_data = "rename"),InlineKeyboardButton("🔐 ᴄᴀɴᴄᴇʟ",callback_data = "cancel")  ]]))
        		            total_rename(int(botid),prrename)
        		            total_size(int(botid),prsize,file.file_size)
        		        else:
@@ -162,7 +162,7 @@ async def send_doc(client,message):
        		    fileid = file.file_id
        		    total_rename(int(botid),prrename)
        		    total_size(int(botid),prsize,file.file_size)
-       		    await message.reply_text(f"""__What do you want me to do with this file?__\n**File Name** :- {filename}\n**File Size** :- {filesize}\n**Dc ID** :- {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup(
+       		    await message.reply_text(f"""__ᴡʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴍᴇ ᴛᴏ ᴅᴏ ᴡɪᴛʜ ᴛʜɪs ғɪʟᴇ?__\n**Fɪʟᴇ Nᴀᴍᴇ** :- {filename}\n**Fɪʟᴇ Sɪᴢᴇ** :- {filesize}\n**ᴅᴄ ɪᴅ** :- {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup(
        		[[ InlineKeyboardButton("📝 Rename",callback_data = "rename"),
-       		InlineKeyboardButton("✖️ Cancel",callback_data = "cancel")  ]]))
+       		InlineKeyboardButton("🔐 ᴄᴀɴᴄᴇʟ",callback_data = "cancel")  ]]))
        		
