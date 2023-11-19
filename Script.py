@@ -18,3 +18,30 @@ class script(object):
     
     HELP_TXT = """
 ʜᴇʏ {} ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs."""
+    
+    THUMB_TXT = """📝 Note:
+
+🌌 How to set thumbnail
+
+
+Please send any photo to me, and I will save it automatically.
+
+/delthumb : Use this command to delete old thumbnail.
+
+/viewthumb : Use this command to view your current thumbnail."""
+    
+    CAPTION_TXT = """📝 Note:
+
+📌 How to set a custom caption
+
+EX- <code>/set_caption {filename}
+{filesize}</code>
+
+/set_caption - Set a custom caption for your content.
+
+/see_caption - To view your custom caption.
+
+/delete_caption - Remove your custom caption from my database."""
+    
+    SOURCE_TXT = """Source Code Is Private
+if You Need Repo Then DM me"""
