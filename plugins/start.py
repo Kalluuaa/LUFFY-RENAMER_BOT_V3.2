@@ -79,8 +79,8 @@ async def cb_handler(client, query: CallbackQuery):
                 InlineKeyboardButton('Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/elitecraft_Studios'),
                 InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ', url='https://t.me/elitecraft_support')
                 ],[
-                InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about'),
-                InlineKeyboardButton('Hᴇʟᴩ', callback_data='help')
+                InlineKeyboardButton('Hᴇʟᴘ', callback_data='help'),
+                InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about')
             ],[
                 InlineKeyboardButton('Bᴜʏ Pʀᴇᴍɪᴜᴍ', callback_data='premium')
             ]])
@@ -114,7 +114,7 @@ async def cb_handler(client, query: CallbackQuery):
             text=script.THUMB_TXT,
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "help")
             ]])            
 	)
     elif data == "caption":
@@ -122,7 +122,7 @@ async def cb_handler(client, query: CallbackQuery):
             text=script.CAPTION_TXT,
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "help")
             ]])            
 	)
     elif data == "source":
@@ -130,7 +130,7 @@ async def cb_handler(client, query: CallbackQuery):
             text=script.SOURCE_TXT,
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "help")
             ]])            
 	)
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
