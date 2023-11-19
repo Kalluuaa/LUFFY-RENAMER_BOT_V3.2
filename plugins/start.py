@@ -108,15 +108,7 @@ async def cb_handler(client, query: CallbackQuery):
             ]])            
 	)
     elif data == "premium":
-        await query.message.edit_text(
-            text=script.PREMIUM_TXT,
-            disable_web_page_preview = True,
-            reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("ᴀᴅᴍɪɴ", url = "https://t.me/god_luffy_ati")
-            ],[
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
-            ]])            
-	)
+        await query.answer(text="Premium Plans Available After Some Time Later", show_alert=True)
     elif data == "thumb":
         await query.message.edit_text(
             text=script.THUMB_TXT,
