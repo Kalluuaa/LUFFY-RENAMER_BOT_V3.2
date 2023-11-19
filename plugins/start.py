@@ -86,15 +86,6 @@ async def cb_handler(client, query: CallbackQuery):
             ]])
         )
     elif data == "help":
-	await query.message.edit_text(
-            text="● ◌ ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ●"
-        )
         await query.message.edit_text(
             text=script.HELP_TXT.formate(message.from_user.mention),
             disable_web_page_preview=True,
@@ -109,15 +100,6 @@ async def cb_handler(client, query: CallbackQuery):
             ]])            
         )
     elif data == "about":
-	await query.message.edit_text(
-            text="● ◌ ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ●"
-        )
         await query.message.edit_text(
             text=script.ABOUT_TXT,
             disable_web_page_preview = True,
@@ -126,15 +108,6 @@ async def cb_handler(client, query: CallbackQuery):
             ]])            
 	)
     elif data == "premium":
-	await query.message.edit_text(
-            text="● ◌ ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ●"
-        )
         await query.message.edit_text(
             text=script.PREMIUM_TXT,
             disable_web_page_preview = True,
@@ -145,15 +118,6 @@ async def cb_handler(client, query: CallbackQuery):
             ]])            
 	)
     elif data == "thumb":
-	await query.message.edit_text(
-            text="● ◌ ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ●"
-        )
         await query.message.edit_text(
             text=script.THUMB_TXT,
             disable_web_page_preview = True,
@@ -162,15 +126,6 @@ async def cb_handler(client, query: CallbackQuery):
             ]])            
 	)
     elif data == "caption":
-	await query.message.edit_text(
-            text="● ◌ ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ●"
-        )
         await query.message.edit_text(
             text=script.CAPTION_TXT,
             disable_web_page_preview = True,
@@ -179,15 +134,6 @@ async def cb_handler(client, query: CallbackQuery):
             ]])            
 	)
     elif data == "source":
-	await query.message.edit_text(
-            text="● ◌ ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ●"
-        )
         await query.message.edit_text(
             text=script.SOURCE_TXT,
             disable_web_page_preview = True,
