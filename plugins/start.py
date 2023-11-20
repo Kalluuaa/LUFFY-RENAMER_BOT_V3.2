@@ -118,7 +118,7 @@ async def cb_handler(client, query: CallbackQuery):
 	)
     elif data == "premium":
         await query.message.edit_text(
-            text=script.PREMIUM_TXT.format(query.from_user.mention, query.from_user.id, usertype, prexdate),
+            text=script.PREMIUM_TXT.format(query.from_user.mention, query.from_user.id),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton("ғʀᴇᴇ", callback_data="free"),
