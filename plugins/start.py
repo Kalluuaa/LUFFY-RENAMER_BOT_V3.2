@@ -108,7 +108,54 @@ async def cb_handler(client, query: CallbackQuery):
             ]])            
 	)
     elif data == "premium":
-        await query.answer(text="Premium Plans Available After Some Time Later", show_alert=True)
+        await query.message.edit_text(
+            text=script.PREMIUM_TXT,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("ғʀᴇᴇ", callback_data="free"),
+		InlineKeyboardButton("sɪʟᴠᴇʀ", callback_data="silver")
+                ],[
+                InlineKeyboardButton("ɢᴏʟᴅᴇɴ", callback_data = "gold"),
+                InlineKeyboardButton("ᴅɪᴀᴍᴏɴᴅ", callback_data = "diamond")
+            ],[
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+            ]])            
+        )
+    elif data == "free":
+        await query.message.edit_text(
+            text=script.FREE_PLAN,
+            disable_web_page_preview = True,
+            reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "premium")
+            ]])            
+	)
+
+    elif data == "silver":
+        await query.message.edit_text(
+            text=script.SILVER_TXT,
+            disable_web_page_preview = True,
+            reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "premium")
+            ]])            
+	)
+
+    elif data == "gold":
+        await query.message.edit_text(
+            text=script.GOLDEN_TXT,
+            disable_web_page_preview = True,
+            reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "premium")
+            ]])            
+	)
+
+    elif data == "diamond":
+        await query.message.edit_text(
+            text=script.DIAMOND_TXT,
+            disable_web_page_preview = True,
+            reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "premium")
+            ]])            
+	)
     elif data == "thumb":
         await query.message.edit_text(
             text=script.THUMB_TXT,
