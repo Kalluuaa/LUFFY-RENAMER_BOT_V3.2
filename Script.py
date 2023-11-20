@@ -30,7 +30,7 @@ Please send any photo to me, and I will save it automatically.
 
 /viewthumb : Use this command to view your current thumbnail."""
 
-    PREMIUM_TEXT = """ɴᴀᴍᴇ:- {}
+    PREMIUM_TXT = """ɴᴀᴍᴇ:- {}
 ᴜꜱᴇʀ ɪᴅ:- {}
 
 ᴛʜᴀɴᴋ ʏᴏᴜ ꜰᴏʀ ᴄᴏɴꜱɪᴅᴇʀɪɴɢ ᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴ.
