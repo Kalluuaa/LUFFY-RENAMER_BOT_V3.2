@@ -1,6 +1,7 @@
 import os
 import pymongo
 import random
+import shutil, psutil
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 import time
 from pyrogram import Client, filters
@@ -13,10 +14,6 @@ from helper.database import daily as daily_
 import datetime
 from datetime import timedelta, date ,datetime
 from datetime import date as date_
-from helper.progress import humanbytes
-from helper.database import daily as daily_
-from helper.date import check_expi
-from helper.database import uploadlimit , usertype,backpre
 
 from helper.database import  insert ,find_one,used_limit,usertype,uploadlimit,addpredata,total_rename,total_size,usertype,backpre
 from pyrogram.file_id import FileId
@@ -195,6 +192,13 @@ async def cb_handler(client, query: CallbackQuery):
                 InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "help")
             ]])            
 	)
+	    #---------------------------Bot rendring stats-----------------------#
+    elif data == "rendering_info":
+	    cpuUsage = psutil.cpu_percent(interval=0.5)
+	    memory = psutil.virtual_memory().percent
+	    disk = psutil.disk_usage('/').percent
+        await query.answer(text=script.STATS.format(cpuUsage, memory, disk), show_alert=True)
+	    #-----------------------------bot stats-------------------------------#
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
        update_channel = CHANNEL
