@@ -194,10 +194,10 @@ async def cb_handler(client, query: CallbackQuery):
 	)
 	    #---------------------------Bot rendring stats-----------------------#
     elif data == "rendering_info":
-	    cpuUsage = psutil.cpu_percent(interval=0.5)
-	    memory = psutil.virtual_memory().percent
-	    disk = psutil.disk_usage('/').percent
-        await query.answer(text=script.STATS.format(cpuUsage, memory, disk), show_alert=True)
+	cpuUsage = psutil.cpu_percent(interval=0.5)
+	memory = psutil.virtual_memory().percent
+	disk = psutil.disk_usage('/').percent
+	    await query.answer(text=script.STATS.format(cpuUsage, memory, disk), show_alert=True)
 	    #-----------------------------bot stats-------------------------------#
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
@@ -210,7 +210,7 @@ async def send_doc(client,message):
        		await message.reply_text("**__You are not subscribed my channel__** ",
        		reply_to_message_id = message.id,
        		reply_markup = InlineKeyboardMarkup(
-       		[ [ InlineKeyboardButton("Support 🇮🇳" ,url=f"https://t.me/{update_channel}") ]   ]))
+       		[ [ InlineKeyboardButton("Join Our Update Channel" ,url=f"https://t.me/{update_channel}") ]   ]))
        		return
        try:
            bot_data = find_one(int(botid))
