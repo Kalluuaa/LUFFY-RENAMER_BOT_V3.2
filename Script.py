@@ -37,7 +37,7 @@ Please send any photo to me, and I will save it automatically.
 
 ᴄᴜʀʀᴇɴᴛ ᴘʟᴀɴ: {}
 
-ᴅᴀɪʟʏ ᴜᴘʟᴏᴀᴅ:  | {}
+ᴅᴀɪʟʏ ᴜᴘʟᴏᴀᴅ:
 ᴘᴀʀᴀʟʟᴇʟ ᴘʀᴏᴄᴇꜱꜱ: 2
 ᴛɪᴍᴇᴏᴜᴛ: 5 ᴍɪɴᴜᴛᴇꜱ
 ᴛɪᴍᴇ ɢᴀᴘ: ʏᴇꜱ
