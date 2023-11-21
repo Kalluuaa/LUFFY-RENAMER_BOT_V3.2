@@ -194,10 +194,7 @@ async def cb_handler(client, query: CallbackQuery):
 	)
 	    #---------------------------Bot rendring stats-----------------------#
     elif data == "rendering_info":
-	    cpuUsage = psutil.cpu_percent(interval=0.5)
-	    memory = psutil.virtual_memory().percent
-	    disk = psutil.disk_usage('/').percent
-	await query.answer(text=script.STATS.format(cpuUsage, memory, disk), show_alert=True)
+	await query.answer(text=script.STATS, show_alert=True)
 	    #-----------------------------bot stats-------------------------------#
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
