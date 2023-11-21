@@ -98,7 +98,7 @@ async def doc(bot,update):
      else:
      		ph_path = None
      
-     value = 10
+     value = 2147483648
      if value < file.file_size:
          await ms.edit("`⎝⎝✧ 𝘗𝘳𝘦𝘱𝘢𝘳𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦 ✧⎠⎠`")
          try:
@@ -200,7 +200,7 @@ async def vid(bot,update):
      		    ph_path = None
      		    print(e)
      
-     value = 10
+     value = 2147483648
      if value < file.file_size:
          await ms.edit("`⎝⎝✧ 𝘗𝘳𝘦𝘱𝘢𝘳𝘪𝘯𝘨 𝘛𝘰 𝘜𝘱𝘭𝘰𝘢𝘥 𝘠𝘰𝘶𝘳 𝘍𝘪𝘭𝘦 ✧⎠⎠`")
          try:
