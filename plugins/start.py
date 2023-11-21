@@ -32,6 +32,7 @@ DB_URL = os.environ.get("DB_URL","")
 mongo = pymongo.MongoClient(DB_URL)
 db = mongo[DB_NAME]
 dbcol = db["promo"]
+total, used, free = shutil.disk_usage(".")
 
 def profind(id):
 	return dbcol.find_one({"_id":id})
@@ -194,7 +195,6 @@ async def cb_handler(client, query: CallbackQuery):
 	)
 	    #---------------------------Bot rendring stats-----------------------#
     elif data == "rendering_info":
-	total, used, free = shutil.disk_usage(".")
         await query.answer(text=script.STATS.format(get_time(time.time() - client.uptime), psutil.cpu_percent(), psutil.virtual_memory().percent, humanbytes(total), humanbytes(used), psutil.disk_usage('/').percent, humanbytes(free)), show_alert=True)
 	    #-----------------------------bot stats-------------------------------#
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
