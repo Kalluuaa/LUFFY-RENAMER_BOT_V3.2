@@ -1,7 +1,8 @@
 import os
 import pymongo
 import random
-import shutil, psutil
+import shutil, psutil, time
+from utils import get_size, get_time, humanbytes
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 import time
 from pyrogram import Client, filters
@@ -194,7 +195,8 @@ async def cb_handler(client, query: CallbackQuery):
 	)
 	    #---------------------------Bot rendring stats-----------------------#
     elif data == "rendering_info":
-        await query.answer(text=script.STATS, show_alert=True)
+	total, used, free = shutil.disk_usage(".")
+        await query.answer(text=script.STATS.format(get_time(time.time() - client.uptime), psutil.cpu_percent(), psutil.virtual_memory().percent, humanbytes(total), humanbytes(used), psutil.disk_usage('/').percent, humanbytes(free)), show_alert=True)
 	    #-----------------------------bot stats-------------------------------#
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
