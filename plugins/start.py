@@ -64,6 +64,9 @@ async def start(client,message):
 	try:
 	    id = message.text.split(' ')[1]
 	except:
+	    m=await message.reply_sticker("CAACAgQAAxkBAAJ2AAFlXKy5e11B5VhTg4YFfLSdZlqHbwACbg8AAuHqsVDaMQeY6CcRoh4E") 
+	    await asyncio.sleep(1)
+	    await m.delete()
 	    await message.reply_photo(photo ="https://graph.org/file/955538487647c67dce193.jpg",
 		    caption =script.START_TXT.format(message.from_user.mention), 
 	reply_markup=InlineKeyboardMarkup(
