@@ -194,7 +194,7 @@ async def cb_handler(client, query: CallbackQuery):
 	)
 	    #---------------------------Bot rendring stats-----------------------#
     elif data == "rendering_info":
-	await query.answer(text=script.STATS, show_alert=True)
+        await query.answer(text=script.STATS, show_alert=True)
 	    #-----------------------------bot stats-------------------------------#
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
