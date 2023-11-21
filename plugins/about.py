@@ -10,4 +10,4 @@ async def start(client,message):
 	data = find_one(int(botid))
 	total_rename = data["total_rename"]
 	total_size = data["total_size"]
-	await message.reply_text(f"Total User:- {total_user()}\nBot :- @rename_urbot\nCreater :- @mrlokaman\nLanguage :-Python3\nLibrary :- Pyrogram 2.0\nServer :- Railway\nTotal Renamed File :-{total_rename}\nTotal Size Renamed :- {humanbytes(int(total_size))} ",quote=True)
+	await message.reply_text(f"Total User:- {total_user()}\nBot :- <a href="https://telegram.dog/eliterenamebot">𝟺ɢʙ Rᴇɴᴀᴍᴇʀ Bᴏᴛ</a>\nCreater :- <a href="https://god_luffy_ati">𓊈𒆜. ɪᴛ'ꜱ ʟᴜғғʏ 𒆜𓊉</a>\nLanguage :-Python3\nLibrary :- Pyrogram 2.0\nServer :- Unknown\nTotal Renamed File :-{total_rename}\nTotal Size Renamed :- {humanbytes(int(total_size))} ",quote=True)
