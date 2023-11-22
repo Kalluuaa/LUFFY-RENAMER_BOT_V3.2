@@ -24,18 +24,18 @@ BOT_UPTIME  = time.time()
 WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
 
 
-bot = Client(
+class Bot(Client):
 
-           "Renamer",
-
-           bot_token=TOKEN,
-
-           api_id=API_ID,
-
-           api_hash=API_HASH,
-
-           plugins=dict(root='plugins'))
-
+    def __init__(self):
+        super().__init__(
+            name="renamer",
+            api_id=API_ID,
+            api_hash=API_HASH,
+            bot_token=BOT_TOKEN,
+            workers=200,
+            plugins={"root": "plugins"},
+            sleep_threshold=15,
+        )
 
     async def start(self):
         await super().start()
@@ -59,7 +59,6 @@ bot = Client(
                 await self.send_message(LOG_CHANNEL, f"**__{me.mention} Iꜱ Rᴇsᴛᴀʀᴛᴇᴅ !!**\n\n📅 Dᴀᴛᴇ : `{date}`\n⏰ Tɪᴍᴇ : `{time}`\n🌐 Tɪᴍᴇᴢᴏɴᴇ : `Asia/Kolkata`\n\n🉐 Vᴇʀsɪᴏɴ : `v{__version__} (Layer {layer})`</b>")                                
             except:
                 print("Pʟᴇᴀꜱᴇ Mᴀᴋᴇ Tʜɪꜱ Iꜱ Aᴅᴍɪɴ Iɴ Yᴏᴜʀ Lᴏɢ Cʜᴀɴɴᴇʟ")
-           
 
 if STRING:
     apps = [Client2,bot]
