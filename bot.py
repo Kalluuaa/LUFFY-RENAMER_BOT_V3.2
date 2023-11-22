@@ -19,6 +19,8 @@ STRING = os.environ.get("STRING", "")
 
 LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "")
 
+ADMIN = os.environ.get("ADMIN", "")
+
 BOT_UPTIME  = time.time()
 
 WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
