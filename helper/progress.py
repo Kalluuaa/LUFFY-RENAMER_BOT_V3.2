@@ -2,6 +2,7 @@ import math
 import time
 from pyrogram.types import (
     InlineKeyboardButton, InlineKeyboardMarkup)
+LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "")
 
 
 async def progress_for_pyrogram(
@@ -98,3 +99,13 @@ def TimeFormatter(milliseconds: int) -> str:
         ((str(seconds) + "s, ") if seconds else "") + \
         ((str(milliseconds) + "ms, ") if milliseconds else "")
     return tmp[:-2]
+
+async def send_log(b, u):
+    if LOG_CHANNEL is not None:
+        curr = datetime.now(timezone("Asia/Kolkata"))
+        date = curr.strftime('%d %B, %Y')
+        time = curr.strftime('%I:%M:%S %p')
+        await b.send_message(
+            LOG_CHANNEL,
+            f"**--Nᴇᴡ Uꜱᴇʀ Sᴛᴀʀᴛᴇᴅ Tʜᴇ Bᴏᴛ--**\n\nUꜱᴇʀ: {u.mention}\nIᴅ: `{u.id}`\nUɴ: @{u.username}\n\nDᴀᴛᴇ: {date}\nTɪᴍᴇ: {time}\n\nBy: {b.mention}"
+        )
