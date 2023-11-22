@@ -69,4 +69,4 @@ if STRING:
         app.stop()
     
 else:
-    bot.run()
+    Bot.run()
