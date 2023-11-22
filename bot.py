@@ -61,7 +61,7 @@ class Bot(Client):
                 print("Pʟᴇᴀꜱᴇ Mᴀᴋᴇ Tʜɪꜱ Iꜱ Aᴅᴍɪɴ Iɴ Yᴏᴜʀ Lᴏɢ Cʜᴀɴɴᴇʟ")
 
 if STRING:
-    apps = [Client2,Bot]
+    apps = [Client2,self]
     for app in apps:
         app.start()
     idle()
