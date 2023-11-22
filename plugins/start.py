@@ -98,17 +98,6 @@ async def cb_handler(client, query: CallbackQuery):
             ]])
         )
     elif data == "help":
-	await query.message.edit_text(
-            text="▣☐☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣▣"
-	)
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
@@ -123,17 +112,6 @@ async def cb_handler(client, query: CallbackQuery):
             ]])            
         )
     elif data == "about":
-	 await query.message.edit_text(
-            text="▣☐☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣▣"
-	)
         await query.message.edit_text(
             text=script.ABOUT_TXT,
             disable_web_page_preview = True,
@@ -142,17 +120,6 @@ async def cb_handler(client, query: CallbackQuery):
             ]])            
 	)
     elif data == "premium":
-        await query.message.edit_text(
-            text="▣☐☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣▣"
-	)
         await query.message.edit_text(
             text=script.PREMIUM_TXT.format(query.from_user.mention, query.from_user.id),
             disable_web_page_preview=True,
@@ -168,17 +135,6 @@ async def cb_handler(client, query: CallbackQuery):
         )
     elif data == "free":
         await query.message.edit_text(
-            text="▣☐☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣▣"
-	)
-        await query.message.edit_text(
             text=script.FREE_PLAN,
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup([[
@@ -187,17 +143,6 @@ async def cb_handler(client, query: CallbackQuery):
 	)
 
     elif data == "silver":
-        await query.message.edit_text(
-            text="▣☐☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣▣"
-	)
         await query.message.edit_text(
             text=script.SILVER_TXT,
             disable_web_page_preview = True,
@@ -210,17 +155,6 @@ async def cb_handler(client, query: CallbackQuery):
 
     elif data == "gold":
         await query.message.edit_text(
-            text="▣☐☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣▣"
-	)
-        await query.message.edit_text(
             text=script.GOLDEN_TXT,
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup([[
@@ -231,17 +165,6 @@ async def cb_handler(client, query: CallbackQuery):
 	)
 
     elif data == "diamond":
-await query.message.edit_text(
-            text="▣☐☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣▣"
-	)
         await query.message.edit_text(
             text=script.DIAMOND_TXT,
             disable_web_page_preview = True,
@@ -253,17 +176,6 @@ await query.message.edit_text(
 	)
     elif data == "thumb":
         await query.message.edit_text(
-            text="▣☐☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣▣"
-	)
-        await query.message.edit_text(
             text=script.THUMB_TXT,
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup([[
@@ -272,17 +184,6 @@ await query.message.edit_text(
 	)
     elif data == "caption":
         await query.message.edit_text(
-            text="▣☐☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣▣"
-	)
-        await query.message.edit_text(
             text=script.CAPTION_TXT,
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup([[
@@ -290,17 +191,6 @@ await query.message.edit_text(
             ]])            
 	)
     elif data == "source":
-        await query.message.edit_text(
-            text="▣☐☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣☐"
-        )
-        await asyncio.sleep(0.4)
-        await query.message.edit_text(
-            text="▣▣▣"
-	)
         await query.message.edit_text(
             text=script.SOURCE_TXT,
             disable_web_page_preview = True,
