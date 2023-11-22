@@ -6,3 +6,5 @@ TgCrypto
 pymongo==4.0.2
 dnspython
 psutil
+pytz
+aiohttp
