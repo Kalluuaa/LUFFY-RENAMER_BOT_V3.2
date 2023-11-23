@@ -3,7 +3,7 @@ humanize
 hachoir
 pyrogram
 TgCrypto
-pymongo==4.0.2
+pyrogram==2.0.83
 dnspython
 psutil
 pytz
