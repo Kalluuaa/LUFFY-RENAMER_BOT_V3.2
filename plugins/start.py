@@ -209,7 +209,6 @@ async def cb_handler(client, query: CallbackQuery):
 	    #-----------------------------bot stats-------------------------------#
 
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
-@Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
        update_channel = CHANNEL
        user_id = message.from_user.id
@@ -217,13 +216,12 @@ async def send_doc(client,message):
        	try:
        		await client.get_chat_member(update_channel, user_id)
        	except UserNotParticipant:
-       		await message.reply_text("**__𝗬𝗼𝘂 𝗔𝗿𝗲 𝗡𝗼𝘁 𝗦𝘂𝗯𝘀𝗰𝗿𝗶𝗯𝗲𝗱 𝗠𝘆 𝗖𝗵𝗮𝗻𝗻𝗲𝗹__** ",
-                                     reply_to_message_id=message.id,
-                                     reply_markup=InlineKeyboardMarkup(
-                                         [[InlineKeyboardButton("⚜ Uᴘᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ", url=f"https://t.me/{update_channel}")]])) 
-             return
-
-    try:
+       		await message.reply_text("**__You are not subscribed my channel__** ",
+       		reply_to_message_id = message.id,
+       		reply_markup = InlineKeyboardMarkup(
+       		[ [ InlineKeyboardButton("Join Our Update Channel" ,url=f"https://t.me/{update_channel}") ]   ]))
+       		return
+       try:
            bot_data = find_one(int(botid))
            prrename = bot_data['total_rename']
            prsize = bot_data['total_size']
