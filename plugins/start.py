@@ -273,8 +273,8 @@ async def send_doc(client,message):
        		            return
        		        pre_check = check_expi(buy_date)
        		        if pre_check == True:
-                      await message.reply_text("""𝙒𝙝𝙖𝙩 𝘿𝙤 𝙔𝙤𝙪 𝙒𝙖𝙣𝙩 𝙏𝙤 𝘿𝙤 𝙒𝙞𝙩𝙝 𝙏𝙝𝙞𝙨 𝙁𝙞𝙡𝙚𝙨 ?\n\n𝐅𝐢𝐥𝐞 𝐍𝐚𝐦𝐞 :- <code>{filename}</code>\n𝐅𝐢𝐥𝐞 𝐒𝐢𝐳𝐞 :- {humanize.naturalsize(file.file_size)}\n𝐃𝐜 𝐈𝐝 :- {dcid}""", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 Rᴇɴᴀᴍᴇ", callback_data="rename"), InlineKeyboardButton("✖️ Cᴀɴᴄᴇʟ", callback_data="cancel")]])) 
-       		            total_rename(int(botid),prrename)
+                      await message.reply_text(f"""𝙒𝙝𝙖𝙩 𝘿𝙤 𝙔𝙤𝙪 𝙒𝙖𝙣𝙩 𝙏𝙤 𝘿𝙤 𝙒𝙞𝙩𝙝 𝙏𝙝𝙞𝙨 𝙁𝙞𝙡𝙚𝙨 ?\n\n𝐅𝐢𝐥𝐞 𝐍𝐚𝐦𝐞 :- <code>{filename}</code>\n𝐅𝐢𝐥𝐞 𝐒𝐢𝐳𝐞:- {filesize}\n𝐃𝐜 𝐈𝐝 :- {dcid}""", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 Rᴇɴᴀᴍᴇ", callback_data="rename"),InlineKeyboardButton("✖️ Cᴀɴᴄᴇʟ", callback_data="cancel")]]))
+                            total_rename(int(botid),prrename)
        		            total_size(int(botid),prsize,file.file_size)
        		        else:
        		            backpre(message.from_user.id)
