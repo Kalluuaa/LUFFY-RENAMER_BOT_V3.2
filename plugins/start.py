@@ -67,12 +67,12 @@ async def start(client,message):
 	    m=await message.reply_sticker("CAACAgQAAxkBAAJ2AAFlXKy5e11B5VhTg4YFfLSdZlqHbwACbg8AAuHqsVDaMQeY6CcRoh4E") 
 	    await asyncio.sleep(1)
 	    await m.delete()
-	    await message.reply_photo(photo ="https://graph.org/file/955538487647c67dce193.jpg",
-		    caption =script.START_TXT.format(message.from_user.mention), 
+	    await message.reply_photo(photo ="https://graph.org/file/43f5c07fe7c7021b5e44a.jpg",
+		    caption =script.START_TXT.format(wish, message.from_user.mention), 
           reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ" ,url="https://t.me/EliteCraft_Studios"), InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ", url="https://t.me/EliteCraft_Support")], 
-	[InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"), InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about") ],
-	 [InlineKeyboardButton("Bᴜʏ Pʀᴇᴍɪᴜᴍ", callback_data="premium") ]]))
+	 [[ InlineKeyboardButton("Uᴘᴅᴀᴛᴇ" ,url="https://t.me/Max_Leech_Zone_Update"), InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/Noobseverywhere")], 
+	[InlineKeyboardButton("• Hᴇʟᴘ •", callback_data="help"), InlineKeyboardButton("• Aʙᴏᴜᴛ •", callback_data="about") ],
+	 [InlineKeyboardButton("💰 Uᴘɢʀᴀᴅᴇ Tᴏ Pʀᴇᴍɪᴜᴍ 💰", callback_data="premium") ]]))
 	    return
 	if id:
 	        if id == procode:
@@ -88,8 +88,8 @@ async def cb_handler(client, query: CallbackQuery):
             text=script.START_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup = InlineKeyboardMarkup([[
-                InlineKeyboardButton('🔰 Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/Max_Leech_Zone_Update'),
-                InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ 👥', url='https://t.me/Noobseverywhere')
+                InlineKeyboardButton('Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/Max_Leech_Zone_Update'),
+                InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ', url='https://t.me/Noobseverywhere')
                 ],[
                 InlineKeyboardButton('• Hᴇʟᴘ •', callback_data='help'),
                 InlineKeyboardButton('• Aʙᴏᴜᴛ •', callback_data='about')
