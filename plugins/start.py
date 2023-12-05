@@ -198,43 +198,36 @@ async def cb_handler(client, query: CallbackQuery):
 	    #-----------------------------bot stats-------------------------------#
 
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
+@Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
-    update_channel = CHANNEL
-    user_id = message.from_user.id
-    if update_channel:
-        try:	
-            await client.get_chat_member(update_channel, user_id)
-        except UserNotParticipant:
-            _newus = find_one(message.from_user.id)
-            user = _newus["usertype"]
-            await message.reply_text("**__𝗬𝗼𝘂 𝗔𝗿𝗲 𝗡𝗼𝘁 𝗦𝘂𝗯𝘀𝗰𝗿𝗶𝗯𝗲𝗱 𝗠𝘆 𝗖𝗵𝗮𝗻𝗻𝗲𝗹__** ",
-                                     reply_to_message_id=message.id,
-                                     reply_markup=InlineKeyboardMarkup(
-                                         [[InlineKeyboardButton("⚜ Uᴘᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ", url=f"https://t.me/{update_channel}")]]))
-            await client.send_message(log_channel,f"🦋 #rename_logs 🦋,\n**ID** : `{user_id}`\n**Name**: {message.from_user.first_name} {message.from_user.last_name}\n Uꜱᴇʀ-Pʟᴀɴ : {user}\n\n ",
-                                                                                                       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Rᴇꜱᴛʀɪᴄᴛ Uꜱᴇʀ ( PM ) 🔺", callback_data="ceasepower")]]))
-            return
-
-    try:
-        bot_data = find_one(int(botid))
-        prrename = bot_data['total_rename']
-        prsize = bot_data['total_size']
-        user_deta = find_one(user_id)
-    except:
-        await message.reply_text("Uꜱᴇ Aʙᴏᴜᴛ ᴄᴍᴅ Fɪʀꜱᴛ /about")
-    try:
-        used_date = user_deta["date"]
-        buy_date = user_deta["prexdate"]
-        daily = user_deta["daily"]
-        user_type = user_deta["usertype"]
-    except:
-        await message.reply_text(text="ᴅᴀᴛᴀʙᴀsᴇ ʜᴀs ʙᴇᴇɴ ᴄʟᴇᴀʀᴇᴅ ᴄʟɪᴄᴋ ᴏɴ /start",
-                                  reply_markup=InlineKeyboardMarkup([
-                                                                     [InlineKeyboardButton("◌ ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ ◌", url='https://telegram.me/mr_kallua')]                                                             
-                                                                    ]))
-        await message.reply_text(text=f"🦋")
-        return 
-                      
+       update_channel = CHANNEL
+       user_id = message.from_user.id
+       if update_channel :
+       	try:
+       		await client.get_chat_member(update_channel, user_id)
+       	except UserNotParticipant:
+       		await message.reply_text("**__You are not subscribed my channel__** ",
+       		reply_to_message_id = message.id,
+       		reply_markup = InlineKeyboardMarkup(
+       		[ [ InlineKeyboardButton("Join Our Update Channel" ,url=f"https://t.me/{update_channel}") ]   ]))
+       		return
+       try:
+           bot_data = find_one(int(botid))
+           prrename = bot_data['total_rename']
+           prsize = bot_data['total_size']
+           user_deta = find_one(user_id)
+       except:
+           await message.reply_text("Use About cmd first /about")
+       try:
+       	used_date = user_deta["date"]
+       	buy_date= user_deta["prexdate"]
+       	daily = user_deta["daily"]
+       	user_type = user_deta["usertype"]
+       except:
+           await message.reply_text("database has been Cleared click on /start")
+           return
+           
+           
        c_time = time.time()
        
        if user_type=="Free":
@@ -246,7 +239,7 @@ async def send_doc(client,message):
        conversion = datetime.timedelta(seconds=left)
        ltime = str(conversion)
        if left > 0:       	    
-       	await message.reply_text(f"```Sᴏʀʀʏ Dᴜᴅᴇ I Aᴍ Nᴏᴛ Oɴʟʏ Fᴏʀ YOU \nFʟᴏᴏᴅ Cᴏɴᴛʀᴏʟ Iꜱ Aᴄᴛɪᴠᴇ Aᴏ Pʟᴇᴀꜱᴇ Wᴀɪᴛ Fᴏʀ {ltime}```", reply_to_message_id=message.id)
+       	await message.reply_text(f"`Sorry Dude I am not only for YOU \n Flood control is active so please wait for {ltime}`",reply_to_message_id = message.id)
        else:
        		#await client.forward_messages(log_channel, message.from_user.id, message.id)
        		#await client.send_message(log_channel,f"User Id :- {user_id}")       		
