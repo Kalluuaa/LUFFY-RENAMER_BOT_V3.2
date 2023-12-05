@@ -69,11 +69,17 @@ async def start(client,message):
 	    await m.delete()
 	    await message.reply_photo(photo ="https://graph.org/file/955538487647c67dce193.jpg",
 		    caption =script.START_TXT.format(message.from_user.mention), 
-	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ" ,url="https://t.me/EliteCraft_Studios"), InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ", url="https://t.me/EliteCraft_Support")], 
-	[InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"), InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about") ],
-	 [InlineKeyboardButton("Bᴜʏ Pʀᴇᴍɪᴜᴍ", callback_data="premium") ]]))
-	    return
+          reply_markup = InlineKeyboardMarkup([[
+                InlineKeyboardButton('🔰 Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/Max_Leech_Zone_Update'),
+                InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ 👥', url='https://t.me/Noobseverywhere')
+                ],[
+                InlineKeyboardButton('• Hᴇʟᴘ •', callback_data='help'),
+                InlineKeyboardButton('• Aʙᴏᴜᴛ •', callback_data='about')
+            ],[
+                InlineKeyboardButton('💰 Uᴘɢʀᴀᴅᴇ Tᴏ Pʀᴇᴍɪᴜᴍ 💰', callback_data='premium')
+            ]])
+				     )
+	  return
 	if id:
 	        if id == procode:
 	            await message.reply_text("You Can Use Now ")
@@ -88,15 +94,15 @@ async def cb_handler(client, query: CallbackQuery):
             text=script.START_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup = InlineKeyboardMarkup([[
-                InlineKeyboardButton('Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/elitecraft_Studios'),
-                InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ', url='https://t.me/elitecraft_support')
+                InlineKeyboardButton('🔰 Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/Max_Leech_Zone_Update'),
+                InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ 👥', url='https://t.me/Noobseverywhere')
                 ],[
-                InlineKeyboardButton('Hᴇʟᴘ', callback_data='help'),
-                InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about')
+                InlineKeyboardButton('• Hᴇʟᴘ •', callback_data='help'),
+                InlineKeyboardButton('• Aʙᴏᴜᴛ •', callback_data='about')
             ],[
-                InlineKeyboardButton('Bᴜʏ Pʀᴇᴍɪᴜᴍ', callback_data='premium')
+                InlineKeyboardButton('💰 Uᴘɢʀᴀᴅᴇ Tᴏ Pʀᴇᴍɪᴜᴍ 💰', callback_data='premium')
             ]])
-        )
+	)
     elif data == "help":
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
@@ -105,7 +111,7 @@ async def cb_handler(client, query: CallbackQuery):
                 InlineKeyboardButton("ᴛʜᴜᴍʙɴᴀɪʟ", callback_data="thumb"),
 		InlineKeyboardButton("ᴄᴀᴘᴛɪᴏɴ", callback_data="caption")
                 ],[
-                InlineKeyboardButton("ʀᴇɴᴅᴇʀɪɴɢ ɪɴғᴏ", callback_data='rendering_info')
+                InlineKeyboardButton("↻ ʀᴇɴᴅᴇʀɪɴɢ ɪɴғᴏ ↺", callback_data='rendering_info')
                 ],[
                 InlineKeyboardButton("ʜᴏᴍᴇ", callback_data = "start"),
                 InlineKeyboardButton("sᴏᴜʀᴄᴇ", callback_data = "source")
@@ -124,13 +130,7 @@ async def cb_handler(client, query: CallbackQuery):
             text=script.PREMIUM_TXT.format(query.from_user.mention, query.from_user.id),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("ғʀᴇᴇ", callback_data="free"),
-		InlineKeyboardButton("sɪʟᴠᴇʀ", callback_data="silver")
-                ],[
-                InlineKeyboardButton("ɢᴏʟᴅᴇɴ", callback_data = "gold"),
-                InlineKeyboardButton("ᴅɪᴀᴍᴏɴᴅ", callback_data = "diamond")
-            ],[
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+            InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
             ]])            
         )
     elif data == "free":
@@ -210,28 +210,29 @@ async def send_doc(client,message):
        	try:
        		await client.get_chat_member(update_channel, user_id)
        	except UserNotParticipant:
-       		await message.reply_text("**__You are not subscribed my channel__** ",
+       		await message.reply_text("**__𝗬𝗼𝘂 𝗔𝗿𝗲 𝗡𝗼𝘁 𝗦𝘂𝗯𝘀𝗰𝗿𝗶𝗯𝗲𝗱 𝗠𝘆 𝗖𝗵𝗮𝗻𝗻𝗲𝗹__** ",
        		reply_to_message_id = message.id,
        		reply_markup = InlineKeyboardMarkup(
-       		[ [ InlineKeyboardButton("Join Our Update Channel" ,url=f"https://t.me/{update_channel}") ]   ]))
-       		return
+       		[ [ InlineKeyboardButton("⚜ Uᴘᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ" ,url=f"https://t.me/{update_channel}") ]   ]))
+       		await client.send_message(log_channel,f"🦋 #rename_logs 🦋,\n**ID** : `{user_id}`\n**Name**: {message.from_user.first_name} {message.from_user.last_name}\n Uꜱᴇʀ-Pʟᴀɴ : {user}\n\n ",
+                                                                                                       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Rᴇꜱᴛʀɪᴄᴛ Uꜱᴇʀ ( PM ) 🔺", callback_data="ceasepower")]]))
+            return
        try:
            bot_data = find_one(int(botid))
            prrename = bot_data['total_rename']
            prsize = bot_data['total_size']
            user_deta = find_one(user_id)
        except:
-           await message.reply_text("Use About cmd first /about")
+           await message.reply_text("ᴜsᴇ ᴀʙᴏᴜᴛ ᴄᴍᴅ ғɪʀsᴛ /about")
        try:
        	used_date = user_deta["date"]
        	buy_date= user_deta["prexdate"]
        	daily = user_deta["daily"]
        	user_type = user_deta["usertype"]
        except:
-           await message.reply_text("database has been Cleared click on /start")
+           await message.reply_text("ᴅᴀᴛᴀʙᴀsᴇ ʜᴀs ʙᴇᴇɴ ᴄʟᴇᴀʀᴇᴅ ᴄʟɪᴄᴋ ᴏɴ /start")
            return
-           
-           
+                      
        c_time = time.time()
        
        if user_type=="Free":
@@ -243,8 +244,8 @@ async def send_doc(client,message):
        conversion = datetime.timedelta(seconds=left)
        ltime = str(conversion)
        if left > 0:       	    
-       	await message.reply_text(f"`Sorry Dude I am not only for YOU \n Flood control is active so please wait for {ltime}`",reply_to_message_id = message.id)
-       else:
+       	await message.reply_text(f"```Sᴏʀʀʏ Dᴜᴅᴇ I Aᴍ Nᴏᴛ Oɴʟʏ Fᴏʀ YOU \nFʟᴏᴏᴅ Cᴏɴᴛʀᴏʟ Iꜱ Aᴄᴛɪᴠᴇ Aᴏ Pʟᴇᴀꜱᴇ Wᴀɪᴛ Fᴏʀ {ltime}```", reply_to_message_id=message.id)
+    else:
        		#await client.forward_messages(log_channel, message.from_user.id, message.id)
        		#await client.send_message(log_channel,f"User Id :- {user_id}")       		
            		
@@ -268,16 +269,16 @@ async def send_doc(client,message):
 			     		
        		remain = limit- used
        		if remain < int(file.file_size):
-       		    await message.reply_text(f"Sorry! I can't upload files that are larger than {humanbytes(limit)}. File size detected {humanbytes(file.file_size)}\nUsed Daly Limit {humanbytes(used)} If U Want to Rename Large File Upgrade Your Plan ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💰💳",callback_data = "premium") ]]))
+       		    await message.reply_text(f"sᴏʀʀʏ! ɪ ᴄᴀɴ'ᴛ ᴜᴘʟᴏᴀᴅ ғɪʟᴇs ᴛʜᴀᴛ ᴀʀᴇ ʟᴀʀɢᴇʀ ᴛʜᴀɴ {humanbytes(limit)}. ғɪʟᴇ sɪᴢᴇ ᴅᴇᴛᴇᴄᴛᴇᴅ {humanbytes(file.file_size)}\nᴜsᴇᴅ ᴅᴀʟʏ ʟɪᴍɪᴛ {humanbytes(used)} ɪғ ᴜ Want ᴛᴏ ʀᴇɴᴀᴍᴇ ʟᴀʀɢᴇ ғɪʟᴇ ᴜᴘɢʀᴀᴅᴇ ʏᴏᴜʀ ᴘʟᴀɴ ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💰💳",callback_data = "premium") ]]))
        		    return
        		if value < file.file_size:
        		    if STRING:
        		        if buy_date==None:
-       		            await message.reply_text(f" You Can't Upload More Then {humanbytes(limit)} Used Daly Limit {humanbytes(used)} ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💰💳", callback_data = "premium") ]]))
+       		            await message.reply_text(f" ʏᴏᴜ ᴄᴀɴ'ᴛ ᴜᴘʟᴏᴀᴅ ᴍᴏʀᴇ ᴛʜᴇɴ {humanbytes(limit)} ᴜsᴇᴅ ᴅᴀʟʏ ʟɪᴍɪᴛ {humanbytes(used)} ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💰💳", callback_data = "premium") ]]))
        		            return
        		        pre_check = check_expi(buy_date)
        		        if pre_check == True:
-       		            await message.reply_text(f"""__ᴡʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴍᴇ ᴛᴏ ᴅᴏ ᴡɪᴛʜ ᴛʜɪs ғɪʟᴇ?__\n**Fɪʟᴇ Nᴀᴍᴇ** :- {filename}\n**Fɪʟᴇ Sɪᴢᴇ** :- {humanize.naturalsize(file.file_size)}\n**ᴅᴄ ɪᴅ** :- {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 Rename",callback_data = "rename"),InlineKeyboardButton("🔐 ᴄᴀɴᴄᴇʟ",callback_data = "cancel")  ]]))
+                             𝙒𝙝𝙖𝙩 𝘿𝙤 𝙔𝙤𝙪 𝙒𝙖𝙣𝙩 𝙏𝙤 𝘿𝙤 𝙒𝙞𝙩𝙝 𝙏𝙝𝙞𝙨 𝙁𝙞𝙡𝙚𝙨 ?\n\n𝐅𝐢𝐥𝐞 𝐍𝐚𝐦𝐞 :- <code>{filename}</code>\n𝐅𝐢𝐥𝐞 𝐒𝐢𝐳𝐞 :- {humanize.naturalsize(file.file_size)}\n𝐃𝐜 𝐈𝐝 :- {dcid}""", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 Rᴇɴᴀᴍᴇ", callback_data="rename"), InlineKeyboardButton("✖️ Cᴀɴᴄᴇʟ", callback_data="cancel")]])
        		            total_rename(int(botid),prrename)
        		            total_size(int(botid),prsize,file.file_size)
        		        else:
@@ -298,7 +299,6 @@ async def send_doc(client,message):
        		    fileid = file.file_id
        		    total_rename(int(botid),prrename)
        		    total_size(int(botid),prsize,file.file_size)
-       		    await message.reply_text(f"""__ᴡʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴍᴇ ᴛᴏ ᴅᴏ ᴡɪᴛʜ ᴛʜɪs ғɪʟᴇ?__\n**Fɪʟᴇ Nᴀᴍᴇ** :- {filename}\n**Fɪʟᴇ Sɪᴢᴇ** :- {filesize}\n**ᴅᴄ ɪᴅ** :- {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup(
-       		[[ InlineKeyboardButton("📝 Rename",callback_data = "rename"),
-       		InlineKeyboardButton("🔐 ᴄᴀɴᴄᴇʟ",callback_data = "cancel")  ]]))
-       		
+       		    await message.reply_text(f"""𝙒𝙝𝙖𝙩 𝘿𝙤 𝙔𝙤𝙪 𝙒𝙖𝙣𝙩 𝙏𝙤 𝘿𝙤 𝙒𝙞𝙩𝙝 𝙏𝙝𝙞𝙨 𝙁𝙞𝙡𝙚𝙨 ?\n\n𝐅𝐢𝐥𝐞 𝐍𝐚𝐦𝐞 :- <code>{filename}</code>\n𝐅𝐢𝐥𝐞 𝐒𝐢𝐳𝐞:- {filesize}\n𝐃𝐜 𝐈𝐝 :- {dcid}""", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton("📝 Rᴇɴᴀᴍᴇ", callback_data="rename"),
+                  InlineKeyboardButton("✖️ Cᴀɴᴄᴇʟ", callback_data="cancel")]]))
