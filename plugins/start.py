@@ -264,17 +264,17 @@ async def send_doc(client,message):
 			     		
        		remain = limit- used
        		if remain < int(file.file_size):
-       		    await message.reply_text(f"sᴏʀʀʏ! ɪ ᴄᴀɴ'ᴛ ᴜᴘʟᴏᴀᴅ ғɪʟᴇs ᴛʜᴀᴛ ᴀʀᴇ ʟᴀʀɢᴇʀ ᴛʜᴀɴ {humanbytes(limit)}. ғɪʟᴇ sɪᴢᴇ ᴅᴇᴛᴇᴄᴛᴇᴅ {humanbytes(file.file_size)}\nᴜsᴇᴅ ᴅᴀʟʏ ʟɪᴍɪᴛ {humanbytes(used)} ɪғ ᴜ Want ᴛᴏ ʀᴇɴᴀᴍᴇ ʟᴀʀɢᴇ ғɪʟᴇ ᴜᴘɢʀᴀᴅᴇ ʏᴏᴜʀ ᴘʟᴀɴ ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💰💳",callback_data = "premium") ]]))
+       		    await message.reply_text(f"Sorry! I can't upload files that are larger than {humanbytes(limit)}. File size detected {humanbytes(file.file_size)}\nUsed Daly Limit {humanbytes(used)} If U Want to Rename Large File Upgrade Your Plan ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💰💳",callback_data = "premium") ]]))
        		    return
        		if value < file.file_size:
        		    if STRING:
        		        if buy_date==None:
-       		            await message.reply_text(f" ʏᴏᴜ ᴄᴀɴ'ᴛ ᴜᴘʟᴏᴀᴅ ᴍᴏʀᴇ ᴛʜᴇɴ {humanbytes(limit)} ᴜsᴇᴅ ᴅᴀʟʏ ʟɪᴍɪᴛ {humanbytes(used)} ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💰💳", callback_data = "premium") ]]))
+       		            await message.reply_text(f" You Can't Upload More Then {humanbytes(limit)} Used Daly Limit {humanbytes(used)} ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💰💳", callback_data = "premium") ]]))
        		            return
        		        pre_check = check_expi(buy_date)
        		        if pre_check == True:
-                      await message.reply_text(f"""𝙒𝙝𝙖𝙩 𝘿𝙤 𝙔𝙤𝙪 𝙒𝙖𝙣𝙩 𝙏𝙤 𝘿𝙤 𝙒𝙞𝙩𝙝 𝙏𝙝𝙞𝙨 𝙁𝙞𝙡𝙚𝙨 ?\n\n𝐅𝐢𝐥𝐞 𝐍𝐚𝐦𝐞 :- <code>{filename}</code>\n𝐅𝐢𝐥𝐞 𝐒𝐢𝐳𝐞:- {filesize}\n𝐃𝐜 𝐈𝐝 :- {dcid}""", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 Rᴇɴᴀᴍᴇ", callback_data="rename"),InlineKeyboardButton("✖️ Cᴀɴᴄᴇʟ", callback_data="cancel")]]))
-                            total_rename(int(botid),prrename)
+       		            await message.reply_text(f"""__𝙒𝙝𝙖𝙩 𝘿𝙤 𝙔𝙤𝙪 𝙒𝙖𝙣𝙩 𝙏𝙤 𝘿𝙤 𝙒𝙞𝙩𝙝 𝙏𝙝𝙞𝙨 𝙁𝙞𝙡𝙚𝙨 ?_\n\n𝐅𝐢𝐥𝐞 𝐍𝐚𝐦𝐞 :- {filename}\n𝐅𝐢𝐥𝐞 𝐒𝐢𝐳𝐞 :- {humanize.naturalsize(file.file_size)}\n𝐃𝐜 𝐈𝐝 :- {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 Rename",callback_data = "rename"),InlineKeyboardButton("🔐 ᴄᴀɴᴄᴇʟ",callback_data = "cancel")  ]]))
+       		            total_rename(int(botid),prrename)
        		            total_size(int(botid),prsize,file.file_size)
        		        else:
        		            backpre(message.from_user.id)
@@ -294,6 +294,6 @@ async def send_doc(client,message):
        		    fileid = file.file_id
        		    total_rename(int(botid),prrename)
        		    total_size(int(botid),prsize,file.file_size)
-       		    await message.reply_text(f"""𝙒𝙝𝙖𝙩 𝘿𝙤 𝙔𝙤𝙪 𝙒𝙖𝙣𝙩 𝙏𝙤 𝘿𝙤 𝙒𝙞𝙩𝙝 𝙏𝙝𝙞𝙨 𝙁𝙞𝙡𝙚𝙨 ?\n\n𝐅𝐢𝐥𝐞 𝐍𝐚𝐦𝐞 :- <code>{filename}</code>\n𝐅𝐢𝐥𝐞 𝐒𝐢𝐳𝐞:- {filesize}\n𝐃𝐜 𝐈𝐝 :- {dcid}""", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("📝 Rᴇɴᴀᴍᴇ", callback_data="rename"),
-                  InlineKeyboardButton("✖️ Cᴀɴᴄᴇʟ", callback_data="cancel")]]))
+       		    await message.reply_text(f"""__𝙒𝙝𝙖𝙩 𝘿𝙤 𝙔𝙤𝙪 𝙒𝙖𝙣𝙩 𝙏𝙤 𝘿𝙤 𝙒𝙞𝙩𝙝 𝙏𝙝𝙞𝙨 𝙁𝙞𝙡𝙚𝙨 ?__\n\n𝐅𝐢𝐥𝐞 𝐍𝐚𝐦𝐞 :- {filename}\n𝐅𝐢𝐥𝐞 𝐒𝐢𝐳𝐞 :- {filesize}\n𝐃𝐜 𝐈𝐝 :- {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup(
+       		[[ InlineKeyboardButton("📝 Rename",callback_data = "rename"),
+       		InlineKeyboardButton("🔐 ᴄᴀɴᴄᴇʟ",callback_data = "cancel")  ]]))
