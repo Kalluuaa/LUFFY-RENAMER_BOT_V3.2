@@ -69,17 +69,11 @@ async def start(client,message):
 	    await m.delete()
 	    await message.reply_photo(photo ="https://graph.org/file/955538487647c67dce193.jpg",
 		    caption =script.START_TXT.format(message.from_user.mention), 
-          reply_markup = InlineKeyboardMarkup([[
-                InlineKeyboardButton('🔰 Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/Max_Leech_Zone_Update'),
-                InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ 👥', url='https://t.me/Noobseverywhere')
-                ],[
-                InlineKeyboardButton('• Hᴇʟᴘ •', callback_data='help'),
-                InlineKeyboardButton('• Aʙᴏᴜᴛ •', callback_data='about')
-            ],[
-                InlineKeyboardButton('💰 Uᴘɢʀᴀᴅᴇ Tᴏ Pʀᴇᴍɪᴜᴍ 💰', callback_data='premium')
-            ]])
-				     )
-	  return
+          reply_markup=InlineKeyboardMarkup(
+	 [[ InlineKeyboardButton("Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ" ,url="https://t.me/EliteCraft_Studios"), InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ", url="https://t.me/EliteCraft_Support")], 
+	[InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"), InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about") ],
+	 [InlineKeyboardButton("Bᴜʏ Pʀᴇᴍɪᴜᴍ", callback_data="premium") ]]))
+	    return
 	if id:
 	        if id == procode:
 	            await message.reply_text("You Can Use Now ")
