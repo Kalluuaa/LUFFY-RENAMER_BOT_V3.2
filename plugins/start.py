@@ -196,6 +196,7 @@ async def cb_handler(client, query: CallbackQuery):
     elif data == "rendering_info":
         await query.answer(text=script.STATS.format(get_time(time.time() - BOT_START_TIME), psutil.cpu_percent(), psutil.virtual_memory().percent, humanbytes(total), humanbytes(used), psutil.disk_usage('/').percent, humanbytes(free)), show_alert=True)
 	    #-----------------------------bot stats-------------------------------#
+
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
        update_channel = CHANNEL
@@ -203,20 +204,23 @@ async def send_doc(client,message):
        if update_channel :
        	try:
        		await client.get_chat_member(update_channel, user_id)
-       	except UserNotParticipant:
-       		await message.reply_text("**__𝗬𝗼𝘂 𝗔𝗿𝗲 𝗡𝗼𝘁 𝗦𝘂𝗯𝘀𝗰𝗿𝗶𝗯𝗲𝗱 𝗠𝘆 𝗖𝗵𝗮𝗻𝗻𝗲𝗹__** ",
-       		reply_to_message_id = message.id,
-       		reply_markup = InlineKeyboardMarkup(
-       		[ [ InlineKeyboardButton("⚜ Uᴘᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ" ,url=f"https://t.me/{update_channel}") ]   ]))
-       		await client.send_message(log_channel,f"🦋 #rename_logs 🦋,\n**ID** : `{user_id}`\n**Name**: {message.from_user.first_name} {message.from_user.last_name}\n Uꜱᴇʀ-Pʟᴀɴ : {user}\n\n ",
+        except UserNotParticipant:
+            _newus = find_one(message.from_user.id)
+            user = _newus["usertype"]
+            await message.reply_text("**__𝗬𝗼𝘂 𝗔𝗿𝗲 𝗡𝗼𝘁 𝗦𝘂𝗯𝘀𝗰𝗿𝗶𝗯𝗲𝗱 𝗠𝘆 𝗖𝗵𝗮𝗻𝗻𝗲𝗹__** ",
+                                     reply_to_message_id=message.id,
+                                     reply_markup=InlineKeyboardMarkup(
+                                         [[InlineKeyboardButton("⚜ Uᴘᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ", url=f"https://t.me/{update_channel}")]]))
+            await client.send_message(log_channel,f"🦋 #rename_logs 🦋,\n**ID** : `{user_id}`\n**Name**: {message.from_user.first_name} {message.from_user.last_name}\n Uꜱᴇʀ-Pʟᴀɴ : {user}\n\n ",
                                                                                                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Rᴇꜱᴛʀɪᴄᴛ Uꜱᴇʀ ( PM ) 🔺", callback_data="ceasepower")]]))
             return
-       try:
-           bot_data = find_one(int(botid))
-           prrename = bot_data['total_rename']
-           prsize = bot_data['total_size']
-           user_deta = find_one(user_id)
-       except:
+
+    try:
+        bot_data = find_one(int(botid))
+        prrename = bot_data['total_rename']
+        prsize = bot_data['total_size']
+        user_deta = find_one(user_id)
+    except:
            await message.reply_text("ᴜsᴇ ᴀʙᴏᴜᴛ ᴄᴍᴅ ғɪʀsᴛ /about")
        try:
        	used_date = user_deta["date"]
