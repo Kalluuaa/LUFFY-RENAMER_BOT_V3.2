@@ -85,7 +85,7 @@ async def cb_handler(client, query: CallbackQuery):
     data = query.data 
     if data == "start":
         await query.message.edit_text(
-            text=script.START_TXT.format(query.from_user.mention),
+            text=script.START_TXT.format(wish, query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup = InlineKeyboardMarkup([[
                 InlineKeyboardButton('Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/Max_Leech_Zone_Update'),
