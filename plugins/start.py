@@ -1,3 +1,14 @@
+
+from pyrogram.types import (
+    InlineKeyboardButton, InlineKeyboardMarkup)
+import humanize
+from helper.progress import humanbytes
+
+from helper.database import insert, find_one, used_limit, usertype, uploadlimit, addpredata, total_rename, total_size
+from pyrogram.file_id import FileId
+from helper.database import daily as daily_
+import os
+import re, asyncio, os, sys
 import os, asyncio
 import pymongo
 import random
@@ -210,8 +221,7 @@ async def send_doc(client,message):
                                      reply_to_message_id=message.id,
                                      reply_markup=InlineKeyboardMarkup(
                                          [[InlineKeyboardButton("⚜ Uᴘᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ", url=f"https://t.me/{update_channel}")]]))
-            await client.send_message(log_channel,f"🦋 #rename_logs 🦋,\n**ID** : `{user_id}`\n**Name** : {message.from_user.first_name} {message.from_user.last_name}\n Uꜱᴇʀ-Pʟᴀɴ : {user}\n\n ",
-                                                                                                       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Rᴇꜱᴛʀɪᴄᴛ Uꜱᴇʀ ( PM ) 🔺", callback_data="ceasepower")]]))
+            await client.send_message(log_channel,f"🦋 #rename_logs 🦋,\n**ID** : `{user_id}`\n**Name** : {message.from_user.first_name} {message.from_user.last_name}\n Uꜱᴇʀ-Pʟᴀɴ : {user}")
             return
 
     try:
