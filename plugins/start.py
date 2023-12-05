@@ -24,7 +24,7 @@ CHANNEL = os.environ.get('CHANNEL',"")
 import datetime
 from datetime import date as date_
 STRING = os.environ.get("STRING","")
-log_channel = int(os.environ.get("LOG_CHANNEL",""))
+log_channel = int(os.environ.get("LOG_CHANNEL", "-1002066295284"))
 token = os.environ.get('TOKEN','')
 botid = token.split(':')[0]
 
@@ -206,12 +206,15 @@ async def send_doc(client,message):
        	try:
        		await client.get_chat_member(update_channel, user_id)
        	except UserNotParticipant:
-       		await message.reply_text("**__You are not subscribed my channel__** ",
-       		reply_to_message_id = message.id,
-       		reply_markup = InlineKeyboardMarkup(
-       		[ [ InlineKeyboardButton("Join Our Update Channel" ,url=f"https://t.me/{update_channel}") ]   ]))
-       		return
-       try:
+       		await message.reply_text("**__𝗬𝗼𝘂 𝗔𝗿𝗲 𝗡𝗼𝘁 𝗦𝘂𝗯𝘀𝗰𝗿𝗶𝗯𝗲𝗱 𝗠𝘆 𝗖𝗵𝗮𝗻𝗻𝗲𝗹__** ",
+                                     reply_to_message_id=message.id,
+                                     reply_markup=InlineKeyboardMarkup(
+                                         [[InlineKeyboardButton("⚜ Uᴘᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ", url=f"https://t.me/{update_channel}")]]))
+            await client.send_message(log_channel,f"🦋 #rename_logs 🦋,\n**ID** : `{user_id}`\n**Name** : {message.from_user.first_name} {message.from_user.last_name}\n Uꜱᴇʀ-Pʟᴀɴ : {user}\n\n ",
+                                                                                                       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Rᴇꜱᴛʀɪᴄᴛ Uꜱᴇʀ ( PM ) 🔺", callback_data="ceasepower")]]))
+            return
+
+    try:
            bot_data = find_one(int(botid))
            prrename = bot_data['total_rename']
            prsize = bot_data['total_size']
