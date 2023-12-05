@@ -247,7 +247,7 @@ async def send_doc(client,message):
        ltime = str(conversion)
        if left > 0:       	    
        	await message.reply_text(f"```Sᴏʀʀʏ Dᴜᴅᴇ I Aᴍ Nᴏᴛ Oɴʟʏ Fᴏʀ YOU \nFʟᴏᴏᴅ Cᴏɴᴛʀᴏʟ Iꜱ Aᴄᴛɪᴠᴇ Aᴏ Pʟᴇᴀꜱᴇ Wᴀɪᴛ Fᴏʀ {ltime}```", reply_to_message_id=message.id)
-    else:
+       else:
        		#await client.forward_messages(log_channel, message.from_user.id, message.id)
        		#await client.send_message(log_channel,f"User Id :- {user_id}")       		
            		
