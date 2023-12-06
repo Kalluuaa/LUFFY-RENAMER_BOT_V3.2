@@ -1,4 +1,3 @@
-
 from pyrogram.types import (
     InlineKeyboardButton, InlineKeyboardMarkup)
 import humanize
@@ -55,11 +54,11 @@ def profind(id):
 currentTime = datetime.datetime.now()
 
 if currentTime.hour < 12:
-	wish = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ."
+	wish = "ɢᴏᴏᴅ Mᴏʀɴɪɴɢ."
 elif 12 <= currentTime.hour < 12:
-	wish = 'Gᴏᴏᴅ ᴀғᴛᴇʀɴᴏᴏɴ.'
+	wish = 'Gᴏᴏᴅ Aғᴛᴇʀɴᴏᴏɴ.'
 else:
-	wish = 'Gᴏᴏᴅ ᴇᴠᴇɴɪɴɢ.'
+	wish = 'Gᴏᴏᴅ Eᴠᴇɴɪɴɢ.'
 
 #-------------------------------
 
@@ -135,7 +134,8 @@ async def cb_handler(client, query: CallbackQuery):
             text=script.PREMIUM_TXT.format(query.from_user.mention, query.from_user.id),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-            InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+            InlineKeyboardButton("⇚ ʙᴀᴄᴋ", callback_data = "start"), 
+            InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ', url='https://t.me/mr_kallua')
             ]])            
         )
     elif data == "free":
@@ -184,7 +184,7 @@ async def cb_handler(client, query: CallbackQuery):
             text=script.THUMB_TXT,
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "help")
+                InlineKeyboardButton("⇚ ʙᴀᴄᴋ", callback_data = "help")
             ]])            
 	)
     elif data == "caption":
