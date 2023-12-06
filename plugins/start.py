@@ -54,7 +54,7 @@ def profind(id):
 currentTime = datetime.datetime.now()
 
 if currentTime.hour < 12:
-	wish = "ɢᴏᴏᴅ Mᴏʀɴɪɴɢ."
+	wish = "Gᴏᴏᴅ Mᴏʀɴɪɴɢ."
 elif 12 <= currentTime.hour < 12:
 	wish = 'Gᴏᴏᴅ Aғᴛᴇʀɴᴏᴏɴ.'
 else:
@@ -134,8 +134,8 @@ async def cb_handler(client, query: CallbackQuery):
             text=script.PREMIUM_TXT.format(query.from_user.mention, query.from_user.id),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-            InlineKeyboardButton("⇚ ʙᴀᴄᴋ", callback_data = "start"), 
-            InlineKeyboardButton('Sᴜᴩᴩᴏʀᴛ', url='https://t.me/mr_kallua')
+            InlineKeyboardButton("⇚ 𝐁𝐚𝐜𝐤", callback_data = "start"), 
+            InlineKeyboardButton('𝐂𝐨𝐧𝐭𝐚𝐜𝐭 ↝', url='https://t.me/mr_kallua')
             ]])            
         )
     elif data == "free":
