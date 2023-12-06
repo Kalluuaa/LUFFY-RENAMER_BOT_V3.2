@@ -28,16 +28,15 @@ Fʀᴇᴇ Dɪꜱᴋ: {}"""
     HELP_TXT = """
 ʜᴇʏ {} ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs."""
     
-    THUMB_TXT = """📝 Note:
+    THUMB_TXT = """📝 𝗡𝗼𝘁𝗲 :
 
-🌌 How to set thumbnail
+🌌 𝐇𝐨𝐰 𝐓o 𝐒𝐞𝐭 𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥
 
+Pʟᴇᴀsᴇ Sᴇɴᴅ Aɴʏ Pʜᴏᴛᴏ Tᴏ Mᴇ, Aɴᴅ I Wɪʟʟ Sᴀᴠᴇ Iᴛ Aᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ.
 
-Please send any photo to me, and I will save it automatically.
+/delthumb : Usᴇ Tʜɪs Cᴏᴍᴍᴀɴᴅ Tᴏ Dᴇʟᴇᴛᴇ Oʟᴅ Tʜᴜᴍʙɴᴀɪʟ.
 
-/delthumb : Use this command to delete old thumbnail.
-
-/viewthumb : Use this command to view your current thumbnail."""
+/viewthumb : Usᴇ Tʜɪs Cᴏᴍᴍᴀɴᴅ Tᴏ Vɪᴇᴡ Yᴏᴜʀ Cᴜʀʀᴇɴᴛ Tʜᴜᴍʙɴᴀɪʟ."""
 
     PREMIUM_TXT = """
 <b>🔹𝐅𝐫𝐞𝐞 𝐔𝐬𝐞𝐫 𝐏𝐥𝐚𝐧 𝟐𝟎ɢʙ/ᴅᴀʏ
@@ -92,33 +91,33 @@ Tʜɪs Bᴏᴛ Is Tᴏᴛᴀʟʟʏ Fʀᴇᴇ Fᴏʀ Aʟʟ Bᴜᴛ Aᴛ Fɪʀsᴛ
 
 𝗦ʜᴀʀᴇ 𝗔ɴᴅ 𝗦ᴜᴘᴘᴏʀᴛ ❤️🙏**"""
     
-    CAPTION_TXT = """📝 Note:
+    CAPTION_TXT = """📝 𝗡𝗼𝘁𝗲 :
 
-📌 How to set a custom caption
+📌 𝐇𝐨𝐰 𝐓𝐨 𝐒𝐞𝐭 𝐀 𝐂𝐮𝐬𝐭𝐨𝐦 𝐂𝐚𝐩𝐭𝐢𝐨𝐧
 
 EX- <code>/set_caption {filename}
 {filesize}</code>
 
-/set_caption - Set a custom caption for your content.
+/set_caption - Sᴇᴛ A Cᴜsᴛᴏᴍ Cᴀᴘᴛɪᴏɴ Fᴏʀ Yᴏᴜʀ Cᴏɴᴛᴇɴᴛ.
 
-/see_caption - To view your custom caption.
+/see_caption - Tᴏ Yɪᴇᴡ ʏᴏᴜʀ Cᴜsᴛᴏᴍ Cᴀᴘᴛɪᴏɴ.
 
-/delete_caption - Remove your custom caption from my database."""
+/delete_caption - Rᴇᴍᴏᴠᴇ Yᴏᴜʀ Cᴜsᴛᴏᴍ Cᴀᴘᴛɪᴏɴ Fʀᴏᴍ Mʏ Dᴀᴛᴀʙᴀsᴇ."""
     
-    SOURCE_TXT = """─────「 𝐀𝐥𝐥 𝐁𝐎𝐓𝐒 」─────
+    SOURCE_TXT = """<b>─────「 𝐀𝐥𝐥 𝐁𝐎𝐓𝐒 」─────
 
 🏷 𝗟𝗲𝗲𝗰𝗵 𝗕𝗼𝘁𝘀 
-[ **𝙼𝙰𝚇 𝙻𝙴𝙴𝙲𝙷 𝚉𝙾𝙽𝙴 💡** ](https://t.me/+6aN3J2yRbd9jNjk9)
+[ 𝙼𝙰𝚇 𝙻𝙴𝙴𝙲𝙷 𝚉𝙾𝙽𝙴 💡](https://t.me/+6aN3J2yRbd9jNjk9)
 
 🏷 𝗕𝘆𝗽𝗮𝘀𝘀 𝗕𝗼𝘁
-[ **𝙼𝙰𝚇 𝙱𝚈𝙿𝚂𝚂𝚂 𝚉𝙾𝙽𝙴 𝚅𝟷 🚸**](https://telegram.me/File_ToLink_Max_Bot?start)
+[ 𝙼𝙰𝚇 𝙱𝚈𝙿𝚂𝚂𝚂 𝚉𝙾𝙽𝙴 𝚅𝟷 🚸](https://telegram.me/File_ToLink_Max_Bot?start)
 
 🏷 𝗙𝗶𝗹𝗲 𝗧𝗼 𝗟𝗶𝗻𝗸 𝗕𝗼𝘁𝘀 
-[ **Fɪʟᴇ Tᴏ Lɪɴᴋ ❤️‍🔥** ](https://telegram.me/ProFileToLinkBot?start)
-[ **𝗠𝗮𝘅 𝗙𝗶𝗹𝗲 𝗧𝗼 𝗟𝗶𝗻𝗸 ♻️** ](https://telegram.me/File_ToLink_Max_Bot?start)
+[ Fɪʟᴇ Tᴏ Lɪɴᴋ ❤️‍🔥 ](https://telegram.me/ProFileToLinkBot?start)
+[ 𝗠𝗮𝘅 𝗙𝗶𝗹𝗲 𝗧𝗼 𝗟𝗶𝗻𝗸 ♻️](https://telegram.me/File_ToLink_Max_Bot?start)
  
 🏷 𝟰𝗚𝗕 𝗥𝗲𝗻𝗮𝗺𝗲 𝗕𝗼𝘁 
-[ **Pʀᴇᴍɪᴜᴍ Rᴇɴᴀᴍᴇʀ 📝**](https://telegram.me/public_renamerbot?start)
+[ Pʀᴇᴍɪᴜᴍ Rᴇɴᴀᴍᴇʀ 📝](https://telegram.me/public_renamerbot?start)
 
 🏷 𝗠𝗼𝘃𝗶𝗲𝘀/𝗦𝗲𝗿𝗶𝗲𝘀 𝗕𝗼𝘁
-[ **Gʀɪᴍ Rᴇᴀᴘᴇʀ ☠**](https://telegram.me/grim_reaper_moviesbot?start)"""
+[ Gʀɪᴍ Rᴇᴀᴘᴇʀ ☠](https://telegram.me/grim_reaper_moviesbot?start)</b>"""
