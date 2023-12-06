@@ -74,10 +74,10 @@ async def start(client,message):
 	try:
 	    id = message.text.split(' ')[1]
 	except:
-	    m=await message.reply_sticker("CAACAgQAAxkBAAJ2AAFlXKy5e11B5VhTg4YFfLSdZlqHbwACbg8AAuHqsVDaMQeY6CcRoh4E") 
+	    m=await message.reply_sticker("CAACAgUAAxkBAAICJWVwxD-gmBcqxPLl3yi5j_0rP58rAALcCgACbi0oVfb5HdAfCS0fHgQ") 
 	    await asyncio.sleep(1)
 	    await m.delete()
-	    await message.reply_photo(photo ="https://graph.org/file/43f5c07fe7c7021b5e44a.jpg",
+	    await message.reply_photo(photo ="https://graph.org/file/320c2123ce669a165f0c3.jpg",
 		    caption =script.START_TXT.format(wish, message.from_user.mention), 
           reply_markup=InlineKeyboardMarkup(
 	 [[ InlineKeyboardButton("Uᴘᴅᴀᴛᴇ" ,url="https://t.me/Max_Leech_Zone_Update"), InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/Noobseverywhere")], 
@@ -118,7 +118,7 @@ async def cb_handler(client, query: CallbackQuery):
                 InlineKeyboardButton("↻ ʀᴇɴᴅᴇʀɪɴɢ ɪɴғᴏ ↺", callback_data='rendering_info')
                 ],[
                 InlineKeyboardButton("ʜᴏᴍᴇ", callback_data = "start"),
-                InlineKeyboardButton("sᴏᴜʀᴄᴇ", callback_data = "source")
+                InlineKeyboardButton("ʙᴏᴛs", callback_data = "source")
             ]])            
         )
     elif data == "about":
@@ -126,7 +126,7 @@ async def cb_handler(client, query: CallbackQuery):
             text=script.ABOUT_TXT,
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("⇚ 𝐁𝐚𝐜𝐤", callback_data = "start")
             ]])            
 	)
     elif data == "premium":
@@ -184,7 +184,7 @@ async def cb_handler(client, query: CallbackQuery):
             text=script.THUMB_TXT,
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("⇚ ʙᴀᴄᴋ", callback_data = "help")
+                InlineKeyboardButton("⇚ 𝐁𝐚𝐜𝐤", callback_data = "help")
             ]])            
 	)
     elif data == "caption":
@@ -192,7 +192,7 @@ async def cb_handler(client, query: CallbackQuery):
             text=script.CAPTION_TXT,
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "help")
+                InlineKeyboardButton("⇚ 𝐁𝐚𝐜𝐤", callback_data = "help")
             ]])            
 	)
     elif data == "source":
@@ -200,7 +200,7 @@ async def cb_handler(client, query: CallbackQuery):
             text=script.SOURCE_TXT,
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "help")
+                InlineKeyboardButton("⇚ 𝐁𝐚𝐜𝐤", callback_data = "help")
             ]])            
 	)
 	    #---------------------------Bot rendring stats-----------------------#
