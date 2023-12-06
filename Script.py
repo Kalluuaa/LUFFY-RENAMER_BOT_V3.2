@@ -105,5 +105,20 @@ EX- <code>/set_caption {filename}
 
 /delete_caption - Remove your custom caption from my database."""
     
-    SOURCE_TXT = """Source Code Is Private
-if You Need Repo Then DM me"""
+    SOURCE_TXT = """─────「 𝐀𝐥𝐥 𝐁𝐎𝐓𝐒 」─────
+
+🏷 𝗟𝗲𝗲𝗰𝗵 𝗕𝗼𝘁𝘀 
+[ **𝙼𝙰𝚇 𝙻𝙴𝙴𝙲𝙷 𝚉𝙾𝙽𝙴 💡** ](https://t.me/+6aN3J2yRbd9jNjk9)
+
+🏷 𝗕𝘆𝗽𝗮𝘀𝘀 𝗕𝗼𝘁
+[ **𝙼𝙰𝚇 𝙱𝚈𝙿𝚂𝚂𝚂 𝚉𝙾𝙽𝙴 𝚅𝟷 🚸**](https://telegram.me/File_ToLink_Max_Bot?start)
+
+🏷 𝗙𝗶𝗹𝗲 𝗧𝗼 𝗟𝗶𝗻𝗸 𝗕𝗼𝘁𝘀 
+[ **Fɪʟᴇ Tᴏ Lɪɴᴋ ❤️‍🔥** ](https://telegram.me/ProFileToLinkBot?start)
+[ **𝗠𝗮𝘅 𝗙𝗶𝗹𝗲 𝗧𝗼 𝗟𝗶𝗻𝗸 ♻️** ](https://telegram.me/File_ToLink_Max_Bot?start)
+ 
+🏷 𝟰𝗚𝗕 𝗥𝗲𝗻𝗮𝗺𝗲 𝗕𝗼𝘁 
+[ **Pʀᴇᴍɪᴜᴍ Rᴇɴᴀᴍᴇʀ 📝**](https://telegram.me/public_renamerbot?start)
+
+🏷 𝗠𝗼𝘃𝗶𝗲𝘀/𝗦𝗲𝗿𝗶𝗲𝘀 𝗕𝗼𝘁
+[ **Gʀɪᴍ Rᴇᴀᴘᴇʀ ☠**](https://telegram.me/grim_reaper_moviesbot?start)"""
