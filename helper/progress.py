@@ -29,14 +29,14 @@ async def progress_for_pyrogram(
         estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
         progress = "{0}{1}\n".format(
-            ''.join(["▣" for i in range(math.floor(percentage / 5))]),
-            ''.join(["▢" for i in range(20 - math.floor(percentage / 5))]))
+            ''.join(["◍" for i in range(math.floor(percentage / 5))]),
+            ''.join(["◌" for i in range(20 - math.floor(percentage / 5))]))
 
         #progress = "{0}{1}".format(
             #''.join(["█" for i in range(math.floor(percentage / 5))]),
             #''.join(["░" for i in range(20 - math.floor(percentage / 5))]))
             
-        tmp = progress +"🗂️: {0} | {1}\n⏳: {2}%\n🚀: {3}/s\n⏱️: {4}\n".format(
+        tmp = progress +"\n⏳️ **Pʀᴏɢʀᴇꜱꜱ :** {0} | {1}\n🗃️ **Sɪᴢᴇ :** {2}%\n🚀 **Sᴘᴇᴇᴅ :** {3}/s\n⏰️ **Eᴛᴀ :** {4}\n".format(
             humanbytes(current),
             humanbytes(total),
             round(percentage, 2),
@@ -50,9 +50,7 @@ async def progress_for_pyrogram(
                     ud_type,
                     tmp
                 ),
-                reply_markup=InlineKeyboardMarkup( [[
-                    InlineKeyboardButton("⨳  C L Ф S Ξ  ⨳", callback_data="cancel")
-                    ]])
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("✖️ 𝐂𝐀𝐍𝐂𝐄𝐋 ✖️", callback_data="cancel")]])                                               
             )
         except:
             pass
